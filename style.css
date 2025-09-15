@@ -1,0 +1,323 @@
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fff8f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background: #ff9f43;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.logo p {
+  font-size: 14px;
+  color: #fffbe7;
+}
+
+.navdiv ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navdiv ul li {
+  margin: 0 15px;
+}
+
+.navdiv ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navdiv ul li a:hover {
+  color: #333;
+}
+
+button {
+  margin-left: 10px;
+  background: #fff;
+  border-radius: 25px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button a {
+  text-decoration: none;
+  color: #ff9f43;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #333;
+}
+
+button:hover a {
+  color: #fff;
+}
+
+/* Scroll Section */
+.scroll {
+  background: #ffecd2;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll h1 {
+  font-size: 18px;
+  color: #333;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Services */
+.services {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.services h1 {
+  font-size: 32px;
+  color: #ff9f43;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.services h1::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #ff9f43;
+  display: block;
+  margin: 10px auto;
+}
+
+.service {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.service p {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.service p:hover {
+  transform: translateY(-8px);
+  background: #ff9f43;
+  color: #fff;
+}
+
+/* Body Section */
+.body {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.body h1 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  color: #ff9f43;
+}
+
+.weblink a {
+  background: #ff9f43;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.weblink a:hover {
+  background: #333;
+  transform: scale(1.1);
+}
+
+.body p {
+  margin: 15px 0;
+  font-weight: bold;
+  color: #444;
+}
+
+.bodyimg {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.bodyimg img {
+  width: 160px;
+  transition: 0.3s ease-in-out;
+}
+
+.bodyimg img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+/* ------------------ Global Responsive Adjustments ------------------ */
+@media (max-width: 1200px) {
+  .logo h1 {
+    font-size: 24px;
+  }
+
+  .logo p {
+    font-size: 13px;
+  }
+
+  .services h1 {
+    font-size: 28px;
+  }
+
+  .body h1 {
+    font-size: 32px;
+  }
+
+  .bodyimg img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navdiv {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navdiv ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navdiv ul li {
+    margin: 10px 0;
+  }
+
+  button {
+    margin: 10px 0 0 0;
+  }
+
+  .service {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll h1 {
+    font-size: 16px;
+  }
+
+  .services h1 {
+    font-size: 26px;
+  }
+
+  .body h1 {
+    font-size: 28px;
+  }
+
+  .weblink a {
+    padding: 10px 20px;
+  }
+
+  .bodyimg {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bodyimg img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  .logo p {
+    font-size: 12px;
+  }
+
+  .scroll h1 {
+    font-size: 14px;
+  }
+
+  .service p {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .body h1 {
+    font-size: 24px;
+  }
+
+  .weblink a {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .bodyimg img {
+    width: 120px;
+  }
+}

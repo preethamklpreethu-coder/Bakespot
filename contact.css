@@ -1,0 +1,129 @@
+/* Reset & Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff8f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.h1 {
+  text-align: center;
+  padding: 40px 20px;
+  background: #ff9f43;
+  color: #fff;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.h1 h1 {
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
+/* Paragraph section */
+.paragraph {
+  max-width: 800px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 0 20px;
+  font-size: 18px;
+  color: #555;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Main contact container */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 20px;
+}
+
+/* Contact info */
+.contact, .address {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact:hover, .address:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* Section headings */
+.contact h1, .address h1 {
+  color: #ff9f43;
+  margin-bottom: 20px;
+  font-size: 28px;
+  position: relative;
+}
+
+.contact h1::after, .address h1::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #ff9f43;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Contact items */
+.contact img {
+  width: 50px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact img:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.contact p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #555;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.contact p:hover {
+  color: #ff6f61;
+  transform: scale(1.05);
+}
+
+/* Address styling */
+.address p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {opacity: 0; transform: translateY(-20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media(max-width: 700px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+}

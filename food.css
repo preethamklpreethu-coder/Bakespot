@@ -1,0 +1,244 @@
+/* ------------------ Global Styles ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff8f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ------------------ Navbar ------------------ */
+.navbar {
+  background: #ff9f43;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo h1 {
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.logo p {
+  font-size: 14px;
+  color: #fffbe7;
+}
+
+.navdiv ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.navdiv ul li {
+  margin: 0 10px;
+}
+
+.navdiv ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navdiv ul li a:hover {
+  color: #333;
+}
+
+button {
+  margin-left: 10px;
+  background: #fff;
+  border-radius: 25px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button a {
+  text-decoration: none;
+  color: #ff9f43;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #333;
+}
+
+button:hover a {
+  color: #fff;
+}
+
+/* ------------------ Tab Section ------------------ */
+.tab {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.tab h1 {
+  font-size: 32px;
+  color: #ff9f43;
+  margin-bottom: 20px;
+}
+
+/* ------------------ Table ------------------ */
+.table {
+  overflow-x: auto; /* horizontal scroll for small screens */
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px; /* ensures table scroll on smaller screens */
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+th {
+  background: #ff9f43;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background: #fff3e0;
+}
+
+tr:hover {
+  background: #ffcc80;
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+table a {
+  text-decoration: none;
+  color: #fff;
+  background: #ff9f43;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+table a:hover {
+  background: #333;
+}
+
+/* ------------------ Order Section ------------------ */
+.order {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.order h1 {
+  font-size: 28px;
+  color: #ff9f43;
+  margin-bottom: 15px;
+}
+
+.order p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* ------------------ Responsive Media Queries ------------------ */
+
+/* Large tablets */
+@media (max-width: 992px) {
+  .logo h1 {
+    font-size: 24px;
+  }
+  .logo p {
+    font-size: 12px;
+  }
+  .tab h1 {
+    font-size: 28px;
+  }
+  table th, table td {
+    padding: 10px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .navdiv {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navdiv ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navdiv ul li {
+    margin: 8px 0;
+  }
+
+  button {
+    margin: 8px 0 0 0;
+  }
+
+  .tab h1 {
+    font-size: 24px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  .logo p {
+    font-size: 10px;
+  }
+
+  .tab h1 {
+    font-size: 20px;
+  }
+
+  table th, table td {
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+
+  table {
+    min-width: 400px; /* smaller scroll */
+  }
+
+  .order h1 {
+    font-size: 22px;
+  }
+
+  .order p {
+    font-size: 14px;
+  }
+}
